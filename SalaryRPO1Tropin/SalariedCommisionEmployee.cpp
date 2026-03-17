@@ -60,3 +60,5 @@ std::string SalariedCommisionEmployee::toString() const
 {
 	return std::format("{}\nПродажи: {}, \n% Продаж: {}", SalariedEmployee::toString(), sales, commisionRate);
 }
+
+
