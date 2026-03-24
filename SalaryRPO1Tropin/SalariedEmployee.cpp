@@ -1,8 +1,7 @@
 #include "SalariedEmployee.hpp"
 
-SalariedEmployee::SalariedEmployee(std::string name, double salary)
+SalariedEmployee::SalariedEmployee(std::string name, double salary) : Employee(name)
 {
-	SetName(name);
 	SetSalary(salary);
 }
 

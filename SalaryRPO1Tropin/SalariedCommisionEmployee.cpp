@@ -1,7 +1,7 @@
 #include "SalariedCommisionEmployee.hpp"
 
+
 SalariedCommisionEmployee::SalariedCommisionEmployee(std::string name, double salary, double sales, double commisionRate)
-	: SalariedEmployee (name, salary)
 {
 	SetSales(sales);
 	SetCommisionRate(commisionRate);
@@ -53,12 +53,10 @@ double SalariedCommisionEmployee::GetCommisionRate() const
 
 double SalariedCommisionEmployee::Earnings() const
 {
-	return SalariedEmployee::Earnings() + GetSales() * GetCommisionRate();
+	return Employee::Earnings() + GetSales() * GetCommisionRate();
 }
 
 std::string SalariedCommisionEmployee::toString() const
 {
-	return std::format("{}\nПродажи: {}, \n% Продаж: {}", SalariedEmployee::toString(), sales, commisionRate);
+	return std::format("{}\nПродажи: {}, \n% Продаж: {}", Employee::toString(), sales, commisionRate);
 }
-
-

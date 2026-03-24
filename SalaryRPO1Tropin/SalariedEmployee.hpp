@@ -1,13 +1,10 @@
 #ifndef _SALARIEDEMPLOYEE_HPP_
 #define _SALARIEDEMPLOYEE_HPP_
 
-#include <iostream>
-#include <string>
-#include <format>
-#include <Windows.h>
+#include "Employee.hpp"
 
 
-class SalariedEmployee
+class SalariedEmployee : public Employee
 {
 public:
 	SalariedEmployee(std::string name, double salary);
@@ -18,12 +15,12 @@ public:
 	std::string GetName() const;
 	double GetSalary() const;
 
-	double Earnings() const;
-	std::string toString() const;
+	double Earnings() const override;
+	std::string toString() const override;
+
+	~SalariedEmployee() {};
 
 private:
-	std::string name{};
-	double salary = 0.0;
 };
 
 #endif // !_SALARIEDEMPLOYEE_HPP_
